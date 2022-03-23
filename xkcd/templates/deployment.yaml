@@ -36,9 +36,9 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /view/a1
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: /view/a1
               port: http
