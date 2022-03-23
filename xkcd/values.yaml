@@ -7,7 +7,7 @@ targetPendingRequests: 200
 # chart release namespace
 ingressNamespace: 
 image:
-  repository: arschles/xkcd
+  repository: giuliohome/web.golang
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
