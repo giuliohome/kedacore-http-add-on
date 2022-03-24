@@ -22,6 +22,10 @@ helm install keda kedacore/keda --namespace keda
 ```
 helm install http-add-on kedacore/keda-add-ons-http --namespace keda
 ```
+Change the [host](https://github.com/giuliohome/kedacore-http-add-on/blob/main/xkcd/values.yaml#L2) as appropriate in the value of your local CRD called `HTTPScaledObject` and finally, from this repository's root
+```
+kubectl create -n keda -f v0.2.0/httpscaledobject.yaml
+```
 
 # quick daemon
 ```
