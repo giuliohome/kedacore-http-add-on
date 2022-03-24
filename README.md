@@ -8,6 +8,12 @@ terraform apply
 ```
 
 # setup keda
+Notice that, for example in case of Google shell, you'll need to connect to the cluster before running the following commands.
+That would be something like
+```
+gcloud container clusters get-credentials my-cloud-giulio-dev-v1-mytf --region us-central1 --project my-cloud-giulio
+```
+Then you can proceed with Helm as follows.
 ```
 helm install http-add-on kedacore/keda-add-ons-http --namespace keda
 ```
