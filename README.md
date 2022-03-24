@@ -22,10 +22,7 @@ helm install keda kedacore/keda --namespace keda
 ```
 helm install http-add-on kedacore/keda-add-ons-http --namespace keda
 ```
-Deploy my [web app](https://github.com/giuliohome/web-golang) in go, from this repository's root, using the local Helm application Chart
-```
-helm install xkcd ./xkcd -n keda
-```
+Deploy my [web app](https://github.com/giuliohome/web-golang) in go, from this repository's root, using the local Helm application Chart.
 Change the [host](https://github.com/giuliohome/kedacore-http-add-on/blob/main/xkcd/values.yaml#L2) as appropriate in the value of your local CRD called `HTTPScaledObject` and finally (I've *deleted the ingress* to use an IP address instead of a DNS name)
 ```
 helm install xkcd ./xkcd -n keda
