@@ -26,9 +26,9 @@ Deploy my [web app](https://github.com/giuliohome/web-golang) in go, from this r
 ```
 helm install xkcd ./xkcd -n keda
 ```
-Change the [host](https://github.com/giuliohome/kedacore-http-add-on/blob/main/xkcd/values.yaml#L2) as appropriate in the value of your local CRD called `HTTPScaledObject` and finally
+Change the [host](https://github.com/giuliohome/kedacore-http-add-on/blob/main/xkcd/values.yaml#L2) as appropriate in the value of your local CRD called `HTTPScaledObject` and finally (I've *deleted the ingress* to use an IP address instead of a DNS name)
 ```
-kubectl create -n keda -f v0.2.0/httpscaledobject.yaml
+helm install xkcd ./xkcd -n keda
 ```
 
 # quick daemon
@@ -46,7 +46,7 @@ giuliohome@cloudshell:~ (my-cloud-giulio)$ kubectl get deploy xkcd -n keda
 NAME   READY   UP-TO-DATE   AVAILABLE   AGE
 xkcd   0/0     0            0           29m
 ```
-Start a http connection
+Start a http connection (without the `-H` Host header switch if you've set only an IP address)
 ```bash
 curl -H "Host: myhost.com" http://127.0.0.1:8080/view/a1
 ```
