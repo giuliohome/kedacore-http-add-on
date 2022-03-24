@@ -15,7 +15,8 @@ gcloud container clusters get-credentials my-cloud-giulio-dev-v1-mytf --region u
 ```
 Then you can proceed with Helm as follows.
 ```
-helm install http-add-on kedacore/keda-add-ons-http --namespace keda
+kubectl create namespace keda
+helm install keda kedacore/keda --namespace keda
 ```
 # setup http add-on
 ```
