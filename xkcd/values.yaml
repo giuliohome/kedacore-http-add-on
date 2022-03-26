@@ -1,5 +1,5 @@
 replicaCount: 1
-host: 127.0.0.1:8080
+host: localhost
 targetPendingRequests: 200
 # This is the namespace that the ingress should be installed
 # into. It should be set to the same namespace as the 
